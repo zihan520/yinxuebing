@@ -7,6 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Document</title>
 	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/common.css">
 </head>
@@ -31,7 +32,17 @@
 	</div>
 	<div class="hospital">
 		<div class="banner">
-			<img src="images/zhengzhou.png" alt="">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="images/zhengzhou.png">
+					</div>
+					<div class="swiper-slide">
+						<img src="images/pingpai11.png">
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
 		</div>
 		<div class="btn common">
 			<input type="button" value="医院简介">
@@ -144,6 +155,17 @@
 		</div>
 	</div>
 	 <script src="js/jquery-1.9.0.js"></script>
+	 <script src="js/swiper.min.js"></script>
 	 <script src="js/js.js"></script>
+	 <script>
+	 	var mySwiper=new Swiper(".swiper-container",{
+			loop:true,
+			autoplay:5000,
+			speed:500,
+			effect:'slide',
+			roundLengths:true,
+			pagination : '.swiper-pagination',
+		});
+	 </script>
 </body>
 </html>
