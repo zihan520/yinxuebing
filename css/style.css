@@ -1,0 +1,118 @@
+/* 菜单栏 */
+
+.header{
+	width: 100%;
+	height: auto;
+	background-color: #f7f7f7;
+	padding: 15px 20px;
+	box-sizing: border-box;
+}
+.header>img{
+	width: 60%;
+}
+.header .cebianlan{
+	float: right;
+	color: #333;
+	margin-top: -10px;
+}
+.header .cebianlan .iconfont{
+	font-size: 25px;
+}
+/* search */
+.serach{
+	width: 100%;
+	background-color: #f7f7f7;
+	padding: 0 20px;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+}
+.serach span{
+	position: absolute;
+	z-index: 10;
+	margin-left: 12px;
+	top: 77px;
+	color: #b0bec5;
+	font-size: 18px;
+}
+.serach .bntxt{
+	border-radius: 5px;
+	width:100%;
+	margin: auto;
+	height: 20px;
+	height: 30px;
+	background-color: #dcdcdc;
+	border: none;
+	opacity: 1;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+/* 医院简介 */
+.hospital{
+	background: #fff;
+	height: auto;
+	width: 100%;
+}
+.hospital .banner{
+	width: 100%;
+	padding-top: 10px;
+}
+.hospital .banner img{
+	width: 100%;
+}
+.hospital .common{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+}
+.hospital .btn input{
+	width: 100%;
+	background-color: #2abfd6;
+	color: #fff;
+	border: none;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+}
+.hospital .three_info{
+	width: 100%;
+	box-sizing: border-box;
+	height: 120px;
+	padding: 0px 20px 20px 20px;
+
+}
+.hospital .three_info .three_info_list{
+	height: auto;
+}
+.hospital .three_info .item{
+	box-sizing: border-box;
+	width: 32%;
+	float: left;
+	border-radius: 5px;
+	margin-right: 1%;
+	padding: 10px 0;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
+.hospital .three_info .doc{
+	background-color: #5fc95e;
+}
+.hospital .three_info .illness{
+	background-color: #15cda2;
+}
+.hospital .three_info .tech{
+	background-color: #8695e0;
+	margin-right: 0;
+}
+.hospital .three_info .item img{
+	width: 40px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+.hospital .three_info .item p{
+	padding-top: 5px;
+}
+
+

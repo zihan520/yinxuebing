@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简介</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/jianli.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<div class="rightMenu">
+		<ul>
+			<li><a href="jianjie.html">医院简介</a></li>
+			<li><a href="doctor.html">医院新闻</a></li>
+			<li><a href="jishu.html">治疗技术</a></li>
+			<li><a href="jianjie.html">来院路线</a></li>
+		</ul>
+	</div>
+	<header>
+		<div class="back mode">
+			<p><span class="iconfont icon-fanhui"></span></p>
+		</div>
+		<div class="title mode">
+			<p>医院概况/医院简介</p>
+		</div>
+		<div class="cebianlan mode">
+			<p><span class="iconfont icon-cebianlan"></span></p>
+		</div>
+	</header>
+	<div class="news">
+		<ul class="news_list">
+			<li class="news_item">
+				<div class="img">
+					<img src="images/list1.png" alt="">
+				</div>
+				<div class="text">
+					<h3 class="h3_title">技术文章标题</h3>
+					文章内容文章内容文章内容文章内容
+					文章内容文章内容文章内容...
+					<button>详情</button>
+				</div>
+			</li>
+			<li class="news_item">
+				<div class="img">
+					<img src="images/list2.png" alt="">
+				</div>
+				<div class="text">
+					<h3 class="h3_title">技术文章标题</h3>
+					文章内容文章内容文章内容文章内容
+					文章内容文章内容文章内容...
+					<button>详情</button>
+				</div>
+			</li>
+			<li class="news_item">
+				<div class="img">
+					<img src="images/list3.png" alt="">
+				</div>
+				<div class="text">
+					<h3 class="h3_title">技术文章标题</h3>
+					文章内容文章内容文章内容文章内容
+					文章内容文章内容文章内容...
+					<button>详情</button>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="address">
+		<div class="btns">
+			<p><span>咨询台</span>
+			<span>完整版</span>
+			<span>反馈</span>
+			<span>投诉</span></p>
+		</div>
+		<div class="text">
+			地址:郑州市金水区南阳路227号（南阳路与群办路交叉口工商银行旁）
+		</div>
+	</div>
+	<div class="map">
+		<div style="width:100%;height:200px;" id="dituContent"></div>
+	</div>
+	<div class="footer">
+		<div class="shouye page ">
+			<a href="index.html">
+				<p><span class="iconfont icon-daohangshouye"></span></p>
+				<p>首页</p>
+			</a>
+		</div>
+		<div class="jianjie page active">
+			<a href="jianjie.html">
+				<p><span class="iconfont icon-yiyuan1"></span></p>
+				<p>简介</p>
+			</a>
+		</div>
+		<div class="jishu page">
+			<a href="jishu.html">
+				<p><span class="iconfont icon-wangyuanjing"></span></p>
+				<p>技术</p>
+			</a>
+		</div>
+		<div class="jianjie2 page">
+			<a href="doctor.html">
+				<p><span class="iconfont icon-ic_caibiaojianjie"></span></p>
+				<p>医生</p>
+			</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	<script src="js/jquery-1.9.0.js"></script>
+	<script src="js/js.js"></script>
+	<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(113.643647,34.798895);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    
+    initMap();//创建和初始化地图
+</script>
+</body>
+</html>

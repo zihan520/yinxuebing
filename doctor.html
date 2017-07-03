@@ -1,0 +1,228 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简介</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Document</title>
+	<link href="css/pagination.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		.banner{
+			margin-top: 1.5rem;
+			width: 100%;
+		}
+		.banner img{
+			width: 100%;
+		}
+		.news .news_list .news_item .two_btns{
+			width: 100%;
+			text-align: center;
+		}
+		.news .news_list .news_item .two_btns button{
+			background-color: rgba(0, 0, 0, 0);
+			padding: 3px;
+			border: none;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+<div class="rightMenu">
+		<ul>
+			<li><a href="jianjie.html">医院简介</a></li>
+			<li><a href="doctor.html">医院新闻</a></li>
+			<li><a href="jishu.html">治疗技术</a></li>
+			<li><a href="jianjie.html">来院路线</a></li>
+		</ul>
+	</div>
+	<header>
+		<div class="back mode">
+			<p><span class="iconfont icon-fanhui"></span></p>
+		</div>
+		<div class="title mode">
+			<p>医疗团队/医生坐诊</p>
+		</div>
+		<div class="cebianlan mode">
+			<p><span class="iconfont icon-cebianlan"></span></p>
+		</div>
+	</header>
+	<div class="banner">
+		<img src="images/zhengzhou.png" alt="">
+	</div>
+	<div class="news data-container">
+		<!-- <ul class="news_list">
+			<li class="news_item">
+				<div class="img">
+					<img src="images/list1.png" alt="">
+				</div>
+				<div class="text">
+					<h3 class="h3_title">技术文章标题</h3>
+					文章内容文章内容文章内容文章内容
+					文章内容文章内容文章内容...
+					<button>新技术</button>
+				</div>
+			</li>
+			<li class="news_item">
+				<div class="img">
+					<img src="images/list2.png" alt="">
+				</div>
+				<div class="text">
+					<h3 class="h3_title">技术文章标题</h3>
+					文章内容文章内容文章内容文章内容
+					文章内容文章内容文章内容...
+					<button>新技术</button>
+				</div>
+			</li>
+			<li class="news_item">
+				<div class="img">
+					<img src="images/list3.png" alt="">
+				</div>
+				<div class="text">
+					<h3 class="h3_title">技术文章标题</h3>
+					文章内容文章内容文章内容文章内容
+					文章内容文章内容文章内容...
+					<button>科研会</button>
+				</div>
+			</li>
+			<li class="news_item">
+				<div class="img">
+					<img src="images/list2.png" alt="">
+				</div>
+				<div class="text">
+					<h3 class="h3_title">技术文章标题</h3>
+					文章内容文章内容文章内容文章内容
+					文章内容文章内容文章内容...
+					<button>新技术</button>
+				</div>
+			</li>
+			<li class="news_item">
+				<p class="two_btns">
+					<button>1</button>
+					<button>2</button>
+				</p>
+			</li>
+		</ul> -->
+	</div>
+	<div id="pagination-demo1" class="pages"></div>
+	<div class="address">
+		<div class="btns">
+			<p><span>咨询台</span>
+			<span>完整版</span>
+			<span>反馈</span>
+			<span>投诉</span></p>
+		</div>
+		<div class="text">
+			地址:郑州市金水区南阳路227号（南阳路与群办路交叉口工商银行旁）
+		</div>
+	</div>
+	<div class="rights">
+		<p>COPYRIGHT 2017 ALL RIGHTS RESERVED 版权所有 </p>
+		<p>备案号:蜀ICP备16014161号-1</p>
+	</div>
+	<div class="footer">
+		<div class="shouye page ">
+			<a href="index.html">
+				<p><span class="iconfont icon-daohangshouye"></span></p>
+				<p>首页</p>
+			</a>
+		</div>
+		<div class="jianjie page">
+			<a href="jianjie.html">
+				<p><span class="iconfont icon-yiyuan1"></span></p>
+				<p>简介</p>
+			</a>
+		</div>
+		<div class="jishu page ">
+			<a href="jishu.html">
+				<p><span class="iconfont icon-wangyuanjing"></span></p>
+				<p>技术</p>
+			</a>
+		</div>
+		<div class="jianjie2 page active">
+			<a href="doctor.html">
+				<p><span class="iconfont icon-ic_caibiaojianjie"></span></p>
+				<p>医生</p>
+			</a>
+		</div>
+	</div>
+	<script src="js/jquery-1.9.0.js"></script>
+	<script src="js/pagination.js"></script>
+	<script src="js/js.js"></script>
+	<script>
+		 $(function(){
+
+	        function createDemo(name){
+	            var container = $('#pagination-' + name);
+	            var sources = function(){
+	                var result = [];
+
+	                for(var i = 1; i < 10; i++){
+	                    result.push(i);
+	                }
+
+	                return result;
+	            }();
+
+	            var options = {
+	                dataSource: sources,
+	                className: 'paginationjs-theme-blue',
+	                callback: function(response, pagination){
+	                    window.console && console.log(response, pagination);
+
+	                    var dataHtml = $("<ul class='news_list'>");
+
+	                    $.each(response, function(index, item){
+	                    	var img ;
+	                    	switch(item%3){
+	                    		case 0:
+	                    			img = $("<img src='images/list1.png'>");
+	                    			break;
+	                    		case 1:
+	                    			img = $("<img src='images/list2.png'>");
+	                    			break;
+	                    		case 2:
+	                    			img = $("<img src='images/list3.png'>");
+	                    			break;
+	                    	}
+	                    	var div1 =$("<div class='img'>").append(img);
+	                    	var div2 = $("<div class='text'>").append($("<h3 class='h3_title'>").html("技术文章标题"))
+	                    	
+	                    	div2.html($("<h3 class='h3_title'>").html("技术文章标题")).append($("<p>").html('文章内容文章内容文章内容文章内容文章内容文章内容文章内容...'));
+	                    	div2.append($("<button>").html("新技术"))
+	                    	var li =$("<li class='news_item'>").append(div1);
+	                    	li.append(div2);
+	                    	dataHtml.append(li);
+	                    });
+
+
+	                    container.prev().html(dataHtml);
+	                }
+	            };
+
+	            //$.pagination(container, options);
+
+	            // container.addHook('beforeInit', function(){
+	            //     window.console && console.log('beforeInit...');
+	            // });
+	            container.pagination(options);
+
+	            // container.addHook('beforePageOnClick', function(){
+	            //     window.console && console.log('beforePageOnClick...');
+	            //     //return false
+	            // });
+
+	            return container;
+	        }
+
+	        createDemo('demo1');
+
+	    });
+	</script>
+</body>
+</html>
